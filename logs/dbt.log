@@ -1,0 +1,66 @@
+[0m11:51:46.105430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b82049370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b80c11a60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b80c11c10>]}
+
+
+============================== 11:51:46.107937 | f563dc76-c676-42e6-bc2a-17221b554a9b ==============================
+[0m11:51:46.107937 [info ] [MainThread]: Running with dbt=1.5.0
+[0m11:51:46.108680 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/dana123/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m11:51:46.109490 [debug] [MainThread]: Starter project path: /home/dana123/.local/lib/python3.8/site-packages/dbt/include/starter_project
+[0m11:55:20.475519 [error] [MainThread]: Encountered an error:
+[Errno 20] Not a directory: '/home/dana123/.dbt/profiles.yml'
+[0m11:55:20.478588 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/dana123/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 86, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/dana123/.local/lib/python3.8/site-packages/dbt/cli/requires.py", line 71, in wrapper
+    return func(*args, **kwargs)
+  File "/home/dana123/.local/lib/python3.8/site-packages/dbt/cli/main.py", line 459, in init
+    results = task.run()
+  File "/home/dana123/.local/lib/python3.8/site-packages/dbt/task/init.py", line 305, in run
+    self.create_profile_from_target(adapter, profile_name=project_name)
+  File "/home/dana123/.local/lib/python3.8/site-packages/dbt/task/init.py", line 180, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/home/dana123/.local/lib/python3.8/site-packages/dbt/task/init.py", line 167, in create_profile_from_profile_template
+    self.write_profile(profile, profile_name)
+  File "/home/dana123/.local/lib/python3.8/site-packages/dbt/task/init.py", line 157, in write_profile
+    with open(profiles_filepath, "w") as f:
+NotADirectoryError: [Errno 20] Not a directory: '/home/dana123/.dbt/profiles.yml'
+
+[0m11:55:20.479715 [debug] [MainThread]: Command `dbt init` failed at 11:55:20.479497 after 214.38 seconds
+[0m11:55:20.480168 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b82049370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b80bbbd00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0b80bbbb50>]}
+[0m11:55:20.480682 [debug] [MainThread]: Flushing usage events
+[0m11:56:22.953602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f004e802340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f004d3c6a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f004d3c6be0>]}
+
+
+============================== 11:56:22.956216 | e723054c-7e08-46e6-835b-027e67636374 ==============================
+[0m11:56:22.956216 [info ] [MainThread]: Running with dbt=1.5.0
+[0m11:56:22.957174 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': '/home/dana123/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m11:56:22.958217 [info ] [MainThread]: A project called dbt_project already exists here.
+[0m11:56:22.959074 [debug] [MainThread]: Command `dbt init` succeeded at 11:56:22.958912 after 0.01 seconds
+[0m11:56:22.959406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f004e802340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0050cbd700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f004d36fb20>]}
+[0m11:56:22.959828 [debug] [MainThread]: Flushing usage events
+[0m11:56:51.863133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f130cc8b340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f130b820a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f130b820be0>]}
+
+
+============================== 11:56:51.865697 | a2f19e63-ec14-4705-8a32-9e37d1772d87 ==============================
+[0m11:56:51.865697 [info ] [MainThread]: Running with dbt=1.5.0
+[0m11:56:51.866426 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/dana123/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m11:56:51.867293 [debug] [MainThread]: Starter project path: /home/dana123/.local/lib/python3.8/site-packages/dbt/include/starter_project
+[0m11:57:38.292090 [info ] [MainThread]: Profile dbt_project written to /home/dana123/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m11:57:38.292996 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m11:57:38.294037 [debug] [MainThread]: Command `dbt init` succeeded at 11:57:38.293841 after 46.44 seconds
+[0m11:57:38.294470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f130cc8b340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f130f118700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f130b7cac40>]}
+[0m11:57:38.295181 [debug] [MainThread]: Flushing usage events
